@@ -1,0 +1,41 @@
+- hosts: general
+  tasks:
+
+  - name: apt-get update
+    apt: update_cache=yes
+
+  - name: Install package list general
+    apt: name={{item}} state=installed
+    with_items:
+      - vim
+      - openssh-server
+      - git
+      - dkms
+      - docker.io
+      - docker-compose
+      - virtualbox
+      - virtualbox-dkms
+      - virtualbox-ext-pack
+      - unzip
+      - wget
+      - aptitude
+      - virtualbox-qt
+      - smbclient
+      - libsmbclient
+      - cifs-utils
+      - xosview
+      - virtualenv
+      - python-pip
+
+  - easy_install:
+      name: cheetah
+      state: latest
+
+  - name: download vagrant deb
+    get_url: 
+      url: https://releases.hashicorp.com/vagrant/1.9.2/vagrant_1.9.2_x86_64.deb 
+      dest: /tmp/vagrant_1.9.2_x86_64.deb
+      mode: 0400
+
+  - name: install vagrant
+    apt: deb=/tmp/vagrant_1.9.2_x86_64.deb state=installed

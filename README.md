@@ -1,2 +1,5 @@
 # ansible_snipettes
-Useful playbook snippettes
+A collection of useful playbook snippettes
+
+Initially Ubuntu based for systems that are newly installed
+More to be added over time
