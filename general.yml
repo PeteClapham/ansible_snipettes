@@ -1,4 +1,4 @@
-- hosts: general
+- hosts: dev 
   
   vars_files:
     - vars/python_packages.yml

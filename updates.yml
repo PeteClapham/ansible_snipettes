@@ -1,4 +1,4 @@
-- hosts: general
+- hosts: dev 
   tasks:
 
   - name: apt-get update
