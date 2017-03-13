@@ -1,0 +1,24 @@
+packages_to_install:
+   - vim
+   - openssh-server
+   - git
+   - dkms
+   - docker.io
+   - docker-compose
+   - virtualbox
+   - virtualbox-dkms
+   - virtualbox-ext-pack
+   - unzip
+   - wget
+   - aptitude
+   - virtualbox-qt
+   - smbclient
+   - libsmbclient
+   - cifs-utils
+   - xosview
+   - virtualenv
+   - python-pip
+   - whois
+   - traceroute
+   - unzip
+   - zip

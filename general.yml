@@ -2,6 +2,7 @@
   
   vars_files:
     - vars/python_packages.yml
+    - vars/packages.yml
 
   tasks:
 
@@ -10,30 +11,7 @@
 
   - name: Install package list general
     apt: name={{item}} state=installed
-    with_items:
-      - vim
-      - openssh-server
-      - git
-      - dkms
-      - docker.io
-      - docker-compose
-      - virtualbox
-      - virtualbox-dkms
-      - virtualbox-ext-pack
-      - unzip
-      - wget
-      - aptitude
-      - virtualbox-qt
-      - smbclient
-      - libsmbclient
-      - cifs-utils
-      - xosview
-      - virtualenv
-      - python-pip
-      - whois
-      - traceroute
-      - unzip
-      - zip
+    with_items: packages_to_install
 
   - name: download vagrant deb
     get_url: 
@@ -57,5 +35,3 @@
   - name: "install python packages: {{ python_packages_to_install }}"
     pip: name="{{ python_packages_to_install | join(' ') }}"
     with_items: python_packages_to_install
-
-
