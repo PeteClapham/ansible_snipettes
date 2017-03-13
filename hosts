@@ -11,12 +11,12 @@
 # Ex 1: Ungrouped hosts, specify before any group headers.
 
 [general]
-spiff
-box
+spiff.local
+box.local
 
 [dev]
-spiff
-box
+spiff.local
+box.local
 
 #green.example.com
 #blue.example.com
