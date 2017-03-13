@@ -1,0 +1,4 @@
+python_packages_to_install:
+  - boto3
+  - cheetah
+  - passlib
