@@ -11,7 +11,7 @@
 
   - name: Install package list general
     apt: name={{item}} state=installed
-    with_items: packages_to_install
+    with_items: "{{ packages_to_install }}"
 
   - name: download vagrant deb
     get_url: 
@@ -34,4 +34,4 @@
 
   - name: "install python packages: {{ python_packages_to_install }}"
     pip: name="{{ python_packages_to_install | join(' ') }}"
-    with_items: python_packages_to_install
+    with_items: "{{ python_packages_to_install }}"
