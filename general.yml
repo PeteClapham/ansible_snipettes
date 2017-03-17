@@ -11,7 +11,7 @@
 
   - name: Install package list general
     apt: name={{item}} state=installed
-    with_items: "{{ packages_to_install }}"
+    with_items: "{{ packages_to_install | join (' ') }}"
 
   - name: download vagrant deb
     get_url: 
